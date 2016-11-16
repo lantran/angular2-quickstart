@@ -3,7 +3,12 @@
     Hello {{name}}
 </div>
 <input type="text" [value]="name" (keyup.enter)="name = $event.target.value">
-
 <input type="text" [(ngModel)]="name">
-
 <button (click)="changeSuitColor()">Change Suit Color</button>
+<br/>
+
+<ul>
+    <li *ngFor="let c of customers">
+        <my-customer [customer]="c"></my-customer>
+    </li>
+</ul>
