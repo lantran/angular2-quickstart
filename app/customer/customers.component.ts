@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CustomerService } from './customer.service';
+import { Observable } from 'rxjs/Rx'
 
 @Component({
     moduleId: module.id,
@@ -9,7 +10,7 @@ import { CustomerService } from './customer.service';
 
 })
 export class CustomersComponent implements OnInit {
-    customers: any[];
+    customers : Observable<any[]>;
     
     constructor(private _customerService: CustomerService) { }
 
